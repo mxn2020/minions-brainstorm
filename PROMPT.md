@@ -351,7 +351,7 @@ minions-brainstorm/
 
 **BEYOND STANDARD PATTERN**
 
-These utilities and classes are specific to `minions-brainstorm`:
+These utilities and classes are specific to `@minions-brainstorm/sdk`:
 
 **ThoughtGraph**
 - Extends `RelationGraph` from `minions-sdk`
@@ -582,7 +582,7 @@ Include working examples for:
 
 **Agent Divergent Exploration** (TypeScript)
 ```typescript
-import { ThoughtGraph, BrainstormSession } from 'minions-brainstorm';
+import { ThoughtGraph, BrainstormSession } from '@minions-brainstorm/sdk';
 
 const session = new BrainstormSession();
 const sessionId = await session.createSession('AI Agent Architectures');
