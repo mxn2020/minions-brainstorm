@@ -144,6 +144,10 @@ Write a complete markdown specification document covering:
 **2. THE CORE LIBRARY** (`/packages/core`)
 
 A framework-agnostic TypeScript library built on `minions-sdk`. Must include:
+- **Unified Client Architecture**:
+  - A standalone `MinionsBrainstorm` client class that wraps all primitives and utilities in a unified facade.
+  - A `BrainstormPlugin` class that implements `MinionPlugin` for mounting onto the core `Minions` client (e.g. `minions.brainstorm`).
+  - Both modular (direct imports) and centralized (client instance) usage must be supported.
 
 - Full TypeScript type definitions for all brainstorm-specific types
 - `ThoughtGraph` class extending `RelationGraph` from `minions-sdk`
@@ -173,6 +177,9 @@ A framework-agnostic TypeScript library built on `minions-sdk`. Must include:
 **3. THE PYTHON SDK** (`/packages/python`)
 
 A complete Python port of the core library with identical functionality:
+- **Unified Client Architecture**:
+  - `MinionsBrainstorm` standalone client class.
+  - `BrainstormPlugin` class for mounting onto the core `Minions` client.
 
 - Python type hints for all classes and methods
 - `ThoughtGraph`, `IdeaClusterer`, `EntropyCalculator`, `IdeaPromoter`, `BrainstormSession` classes
